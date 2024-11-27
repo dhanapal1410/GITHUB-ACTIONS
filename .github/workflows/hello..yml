@@ -2,9 +2,9 @@ name: Hello
 on: push
 
 jobs:
-  hello
-    runs-on:ubuntu-latest
+  hello:
+    runs-on:  ubuntu-latest
 
     steps:
-    - name: Print hello world
-      run: echo "Hello world"
+    - name: Print Hello World
+      run: echo "Hello World"
