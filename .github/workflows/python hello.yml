@@ -2,7 +2,7 @@ name: Run Hello-world from py script
 on: push
 
 jobs:
-  Hello
+  hello
     runs-on: ubuntu-latest
 
     steps:
