@@ -1,21 +1,23 @@
-name: Run Hello-world from py script
-on: push
+name: Hello World Workflow
+
+on: [push]
 
 jobs:
-  hello
+  hello_world_job:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Clone repo
-      uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-    - name: setup python
-      uses: actions/setup-python@v5
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
-        python-version: '3.13' 
+        python-version: '3.x'
 
-    - name: Run a python script
-      run: python hello.py
+    - name: Run Hello World script
+      run: |
+        echo 'print("Hello, World!")' > hello_world.py
+        python hello_world.py
            
 
     
