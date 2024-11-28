@@ -1,4 +1,4 @@
-name: Java Hello World
+name: Java CI
 
 on: [push]
 
@@ -14,10 +14,13 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'
-        distribution: 'temurin'  # Specify the distribution here
+        distribution: 'temurin'
+
+    - name: List files in the directory
+      run: ls -la
 
     - name: Compile Java program
-      run: javac HelloWorld.java
+      run: javac GITHUB-ACTIONS\.github\workflows\HelloWorld.java
 
     - name: Run Java program
       run: java HelloWorld
