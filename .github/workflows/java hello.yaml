@@ -20,7 +20,7 @@ jobs:
       run: ls -la
 
     - name: Compile Java program
-      run: javac GITHUB-ACTIONS\.github\workflows\HelloWorld.java
+      run: javac  HelloWorld.java
 
     - name: Run Java program
       run: java HelloWorld
