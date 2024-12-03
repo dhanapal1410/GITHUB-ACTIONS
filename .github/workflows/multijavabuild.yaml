@@ -33,7 +33,7 @@ jobs:
         run: mvn test --file ${{ matrix.app }}/pom.xml
 
       - name: Upload JAR file
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.app }}-jar
           path: ${{ matrix.app }}/target/*.jar
